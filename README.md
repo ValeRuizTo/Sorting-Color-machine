@@ -119,7 +119,6 @@ Se verificó que:
 - La ausencia de energización impide validar precisión, velocidad y conectividad en condiciones reales.
 - La observación manual permite confirmar que el diseño es funcional y que los componentes están correctamente integrados.
 
-```mermaid
 flowchart TD
     A[Inicio] --> B[Alimentar pieza en cinta transportadora]
     B --> C[Sensor de color detecta tonalidad]
@@ -137,7 +136,6 @@ flowchart TD
     
     I --> J[Continuar con siguiente pieza]
     J --> C
-
 
 ---
 
