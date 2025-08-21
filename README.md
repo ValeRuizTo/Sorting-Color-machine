@@ -119,23 +119,8 @@ Se verificó que:
 - La ausencia de energización impide validar precisión, velocidad y conectividad en condiciones reales.
 - La observación manual permite confirmar que el diseño es funcional y que los componentes están correctamente integrados.
 
-flowchart TD
-    A[Inicio] --> B[Alimentar pieza en cinta transportadora]
-    B --> C[Sensor de color detecta tonalidad]
-    C --> D{Color detectado}
-    
-    D -->|Rojo| E[Activar actuador hacia contenedor 1]
-    D -->|Verde| F[Activar actuador hacia contenedor 2]
-    D -->|Azul| G[Activar actuador hacia contenedor 3]
-    D -->|No detectado| H[Enviar a contenedor de descarte]
-    
-    E --> I[Registrar evento en sistema IoT]
-    F --> I
-    G --> I
-    H --> I
-    
-    I --> J[Continuar con siguiente pieza]
-    J --> C
+<img width="2431" height="661" alt="diagrama_clasificacion" src="https://github.com/user-attachments/assets/5955fb5c-9277-4817-ac33-3d7053dae767" />
+
 
 ---
 
