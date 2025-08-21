@@ -83,19 +83,93 @@ Diagrama de bloques (hardware y software)
 
 ## 3. Configuración Experimental
 
-#### Metodología experimental
+### 3.1 Metodología experimental
+Dado que el prototipo no pudo energizarse durante el desarrollo, las pruebas se realizaron **de forma manual** simulando el flujo de piezas, con observación directa del funcionamiento mecánico y secuencia de clasificación. La metodología está pensada para su ejecución futura en condiciones totalmente operativas.
 
-#### Resultados obtenidos
+**Pasos realizados:**
+1. **Preparación del prototipo**  
+   - Ensamblaje de la cinta transportadora, sensor de color, actuadores y controlador PLC/TXT.
+   - Verificación de integridad mecánica y conexiones.
 
-#### Análisis de resultados
+2. **Simulación manual de alimentación de piezas**  
+   - Colocación manual de piezas de distintos colores en la cinta para observar la respuesta mecánica de desvío.
+
+3. **Observación de clasificación**  
+   - Evaluación visual de si el mecanismo dirige las piezas a los compartimientos correctos.
+
+4. **Registro de datos cualitativos**  
+   - Anotaciones sobre tiempos aproximados, fluidez del movimiento y precisión visual.
+
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/53e1880d-362d-4114-8768-c15825bcf371" />
+
+
+---
+
+### 3.2 Resultados obtenidos
+Las pruebas realizadas fueron de carácter **manual** y observacional, por lo que **no se obtuvieron datos numéricos precisos**.  
+Se verificó que:
+- El mecanismo de clasificación responde adecuadamente al estímulo de una pieza simulada.
+- Los actuadores dirigen las piezas hacia el contenedor correspondiente de forma mecánicamente correcta.
+- El sistema presenta fluidez en el movimiento y sincronización visual aceptable.
+
+---
+
+### 3.3 Análisis de resultados
+- El sistema cumple con la secuencia de clasificación prevista a nivel mecánico.
+- La ausencia de energización impide validar precisión, velocidad y conectividad en condiciones reales.
+- La observación manual permite confirmar que el diseño es funcional y que los componentes están correctamente integrados.
+
+```mermaid
+flowchart TD
+    A[Inicio] --> B[Alimentar pieza en cinta transportadora]
+    B --> C[Sensor de color detecta tonalidad]
+    C --> D{Color detectado}
+    
+    D -->|Rojo| E[Activar actuador hacia contenedor 1]
+    D -->|Verde| F[Activar actuador hacia contenedor 2]
+    D -->|Azul| G[Activar actuador hacia contenedor 3]
+    D -->|No detectado| H[Enviar a contenedor de descarte]
+    
+    E --> I[Registrar evento en sistema IoT]
+    F --> I
+    G --> I
+    H --> I
+    
+    I --> J[Continuar con siguiente pieza]
+    J --> C
+
+
+---
 
 ## 4. Autoevaluación del Protocolo de Pruebas
 
-#### Metodología de validación
+### 4.1 Metodología de validación
+El protocolo está diseñado para validar:
+- **Requerimientos funcionales**: detección de color, clasificación, registro de datos, interfaz.
+- **Requerimientos no funcionales**: velocidad, mantenibilidad, escalabilidad.
 
-#### Limitaciones del protocolo
+La validación prevista incluye:
+- **Pruebas funcionales**: confirmar que cada módulo del sistema cumple su función.
+- **Pruebas de estrés**: evaluar la respuesta ante un alto volumen de piezas.
+- **Pruebas de integración**: verificar la comunicación con el servidor IoT.
 
-#### Mejores prácticas identificadas
+---
+
+### 4.2 Limitaciones del protocolo
+- Las pruebas se realizaron **sin energizar el sistema**, únicamente con manipulación manual.
+- No se evaluó precisión de detección, velocidad de procesamiento ni conectividad.
+- No se probó el comportamiento ante variaciones de iluminación o piezas con colores similares.
+- Falta ejecutar pruebas de fallos intencionales.
+
+---
+
+### 4.3 Mejores prácticas identificadas
+- Calibrar sensores de color antes de cada jornada de trabajo.
+- Mantener registro de datos históricos en la nube para diagnóstico y mantenimiento.
+- Realizar pruebas de estrés periódicas para asegurar rendimiento estable.
+- Documentar cambios de hardware y software para facilitar la mantenibilidad.
+
+
 
 ## 5. Conclusiones y Trabajo Futuro
 
