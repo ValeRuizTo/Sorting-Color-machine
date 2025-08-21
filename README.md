@@ -52,8 +52,6 @@ La línea de clasificación consiste en:
 - Actuación: Dependiendo del color detectado, un actuador (p. ej., desviador o empujador neumático/eléctrico) redirige la pieza hacia la rampa o contenedor correspondiente.
 - Salida: Las piezas se depositan en diferentes compartimientos, logrando la separación automática.
 
-#### Contexto industrial
-
 ## 2. Solución Propuesta
 
 ### Restricciones de diseño
