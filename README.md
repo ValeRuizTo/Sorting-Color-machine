@@ -324,7 +324,7 @@ La validación prevista incluye:
 
 ---
 
-### 4.3 Mejores prácticas identificadas
+### 4.3 Mejores prácticas identificadas / Implementación a futuro
 - Calibrar sensores de color antes de cada jornada de trabajo.
 - Mantener registro de datos históricos en la nube para diagnóstico y mantenimiento.
 - Realizar pruebas de estrés periódicas para asegurar rendimiento estable.
