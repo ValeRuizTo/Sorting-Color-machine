@@ -247,7 +247,7 @@ Dado que durante el desarrollo el prototipo **no pudo ser energizado**, las prue
 
   - Identificación de posibles ajustes en la alineación de sensores o en la velocidad de la cinta para optimizar el desempeño en la fase de validación con energía.
 
-<img width="1600" height="1600" alt="image" src="https://github.com/user-attachments/assets/53e1880d-362d-4114-8768-c15825bcf371" />
+<img width="1300" height="1600" alt="image" src="https://github.com/user-attachments/assets/53e1880d-362d-4114-8768-c15825bcf371" />
 
 
 
