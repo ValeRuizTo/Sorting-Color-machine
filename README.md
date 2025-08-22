@@ -224,7 +224,148 @@ Sistema neumático
 - Línea de aire comprimido → válvulas solenoides → cilindros.
 
 
-### **Codigo realizado en RoboPro**
+### **Codigo en bloques realizado en RoboPro**
+
+Fischertechnik hace uso de un lenguaje de programación basado en bloques lo cual lo hace diferentes a otros dispositivos de Hardware, teniendo un codigo explusivo para este. Los dispositivos que estan en las entradas y salidas son los siguientes (Foto de codigo adjuntada en Anexos y codigo subido en los archivos del repo):
+
+**Entradas**
+
+  I1: final de carrera con rueda (pulse counter de la cinta).
+  
+  I2: fototransistores de entrada (antes del sensor de color).
+  
+  I3: fototransistores de salida del sensor (marca fin de lectura).
+  
+  I4: sensor de color.
+  
+  I5: fototransistores fin de canal blanco.
+  
+  I6: fototransistores fin de canal rojo.
+  
+  I7: fototransistores fin de canal azul.
+
+**Salidas**
+
+  M1: motor de la cinta (ON continuo).
+  
+  M2: válvula/pistón blanco.
+  
+  M3: válvula/pistón rojo.
+  
+  M4: válvula/pistón azul.
+  
+  Q2: compresor (ON continuo,controlado desde el controlador, no aparece en el codigo debido a que no existia un "compressor" como opcion dentro de las salidas).
+
+**Variables usadas**
+
+min_color (int): mínimo leído mientras la pieza pasa por el sensor.
+
+temp_color (int): lectura instantánea del sensor de color.
+
+final_color (int): copia del mínimo cuando la pieza sale del sensor.
+
+limit1, limit2 (int): umbrales de clasificación (p. ej., 1160 y 1500).
+
+cnt_blanco, cnt_rojo, cnt_azul (int): contadores por canal.
+
+**Flujo general (estado por estado)**
+
+  Inicio
+
+    Start → M1 ON (cinta en marcha).
+
+    Q2/compresor ON.
+
+  Detección de entrada
+
+    Wait until I2 == 1: entra una ficha al área del sensor.
+
+    Inicializa min_color = 3000 (valor alto).
+
+    Medición mientras la pieza está en el sensor
+
+    Mientras I3 == 0:
+
+    Lee I4 (analógico) → temp_color.
+
+    Si temp_color < min_color → min_color = temp_color.
+    (Se guarda el mínimo durante el paso.)
+
+  Congelar medición al salir
+
+    Cuando I3 pasa a 1:
+
+    final_color = min_color (con un retardo opcional de 0.05 s para estabilizar).
+
+    RESET del contador I1 (muy importante: comienza a contar distancia desde aquí).
+
+  Clasificación
+
+    Si final_color < limit1 → blanco.
+    
+    Sino si final_color < limit2 → rojo.
+    
+    Sino → azul. (Estos limites pueden ser cambiados de acuerdo a las condiciones y valores que este tomando el sensor, que podrian variar de acuerdo a la zona en la que este ubicado)
+
+  Sincronización por distancia (pulsos)
+
+    Espera hasta que I1 ≥ N (N depende del color).
+    
+    Ejemplo: blanco 8 pulsos, rojo 12, azul 16 (ajustable a la velocidad del engranaje y con esto de la linea de transporte).
+    
+    Se pueden usar ≥ (no “=”) para que sea robusto si se salta un pulso.
+
+  Expulsión (pulso de válvula)
+
+    Activa M2/M3/M4 = ON durante ~0.10 s (Timer) → OFF.
+
+  Verificación y conteo
+
+    Wait until I5/I6/I7 == 1 según color.
+    
+    Incrementa cnt_blanco / cnt_rojo / cnt_azul.
+    
+    Vuelve al paso 2 (Detección de entrada) para la siguiente ficha.
+
+**Detalle de cada tramo (cómo está armado por bloques)**
+
+  1 Búsqueda del mínimo (min-hold)
+  
+    I4 → (=) temp_color (naranja: dato analógico).
+    
+    Comparador A?B con <: A = temp_color, B = min_color.
+    
+    Salida azul del comparador < → (=) min_color = temp_color.
+    Resultado: min_color queda con el valor más bajo visto mientras I3==0.
+
+  2 Cierre de ventana y freeze
+
+    Flanco de I3 (cuando pasa a 1) → (=) final_color = min_color.
+    
+    (Opcional, no es obligatorio pero se integro por buena practica) Timer 0.05 s antes de congelar.
+    
+  3 Clasificación por umbrales
+    
+    A?B (final_color < limit1) → rama blanco.
+    
+    En la rama “no”: A?B (final_color < limit2) → rama rojo; si vuelve a “no” → azul.
+
+
+  4 Distancia con contador de pulsos
+
+    Counter(I1) RESET: conectado al flanco de I3 (salida del sensor).
+    
+    Counter(I1) VALUE (naranja) → A?B (≥) con B = pulsos objetivo.
+
+    Wait until (counter ≥ N) → garantiza que la pieza está frente al pistón correcto.
+
+  5 Pulso de válvula y verificación
+
+    M2/M3/M4 ON → Timer (~0.10 s) → M2/M3/M4 OFF.
+    
+    Wait until I5/I6/I7 == 1 según la rama.
+    
+    cnt_color = cnt_color + 1 (bloque suma de operadores).
 
 ## 3. Configuración Experimental
 
