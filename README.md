@@ -285,7 +285,6 @@ Dado que durante el desarrollo el prototipo **no pudo ser energizado**, las prue
 
 #### 9. Preparación para cableado
 - Organización del cableado según la ubicación de motores, sensores y actuadores.
-- Etiquetado de cada cable para su posterior conexión al controlador.
 
 
 <img width="1300" height="1600" alt="image" src="https://github.com/user-attachments/assets/53e1880d-362d-4114-8768-c15825bcf371" />
