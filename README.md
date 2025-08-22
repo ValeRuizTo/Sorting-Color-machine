@@ -224,7 +224,7 @@ Sistema neumático
 - Línea de aire comprimido → válvulas solenoides → cilindros.
 
 
-### Codigo realizado en RoboPro
+### **Codigo realizado en RoboPro**
 
 ## 3. Configuración Experimental
 
