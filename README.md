@@ -29,6 +29,17 @@ Con el fin de justificar el proyecto se revisaron trabajos recientes sobre autom
 - Autoevaluación del protocolo de pruebas: análisis crítico de la metodología empleada.
 - Conclusiones y trabajo futuro: retos, aprendizajes y proyección del proyecto.Anexos: código fuente, esquemáticos y material complementario.
 
+
+#### Relevancia del proceso
+
+Este proceso de clasificación es fundamental porque:
+- Aumenta la eficiencia al reducir el tiempo y la intervención manual.
+- Mejora la calidad mediante una inspección y separación más precisa.
+- Escala fácilmente a diferentes volúmenes de producción.
+- Reduce costos operativos asociados a errores humanos y reprocesamiento.
+- Integra principios de IIoT, ya que los datos capturados por sensores pueden enviarse a la nube o sistemas SCADA para monitoreo, análisis predictivo y optimización del proceso.
+
+
 ### Proceso seleccionado
 El proceso industrial seleccionado corresponde a una línea de clasificación de piezas por color (Sorting Line with Color Detection 24V), desarrollada con los kits de Fischertechnik \[8]. Este sistema reproduce de manera práctica y didáctica un proceso típico de automatización empleado en la industria manufacturera, donde resulta necesario clasificar objetos en función de sus propiedades físicas detectadas mediante sensores. La implementación de este tipo de líneas permite ilustrar cómo interactúan distintos elementos —sensores, actuadores, controladores y sistemas de transporte— para lograr la separación automática de piezas según criterios predefinidos, reflejando en pequeña escala el funcionamiento real de sistemas industriales más complejos.
 
