@@ -578,6 +578,16 @@ En conjunto, la propuesta busca:
 
 #### Conclusiones principales
 
+- El proyecto permitió diseñar e implementar un prototipo funcional de línea de clasificación con detección de color, integrando sensores, actuadores y controlador en concordancia con los principios del IIoT.
+
+- A pesar de no haberse energizado el sistema durante las pruebas, se verificó que la secuencia mecánica y lógica de clasificación es coherente y viable, confirmando la correcta integración del diseño.
+
+- El uso de simulaciones manuales permitió identificar la validez del flujo operativo (detección → procesamiento → clasificación), demostrando que el prototipo responde al concepto planteado.
+
+- Se evidenció la necesidad de contar con todos los componentes adecuados (especialmente fototransistores y elementos de sensado) para garantizar la precisión y robustez del sistema en condiciones reales.
+
+- El proyecto contribuyó al desarrollo de competencias en automatización industrial, integración de hardware y software, y diseño de arquitecturas IIoT, sentando las bases para una futura implementación completa y energizada.
+
 #### Retos durante el desarrollo
 
 #### Líneas de trabajo futuro
