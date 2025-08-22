@@ -172,8 +172,10 @@ El diseño del prototipo de Sorting Line with Color Detection 24V se fundamenta 
   - Entradas digitales/analógicas para sensores.
   - Salidas digitales para motores y válvulas.
   - Pantalla integrada para monitoreo.
-    
-  ![.](imagenesWiki/controlador.jpg)
+
+ <img width="1000" height="1000" ![.](imagenesWiki/controlador.jpg) />
+
+ 
 
 
 Materiales: 
