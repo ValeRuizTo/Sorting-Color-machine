@@ -91,11 +91,11 @@ Las siguientes restricciones de diseño del prototipo se establecieron siguiendo
 
 ### Arquitectura propuesta
 
-Diagrama de bloques (hardware y software)
+  ![.](imagenesWiki/diagrama.png)
 
 ### Desarrollo teórico modular
 
-#### Criterios de diseño establecidos
+#### Criterios y estandares de diseño establecidos
 El diseño del prototipo de Sorting Line with Color Detection 24V se fundamenta en los lineamientos de la norma ISO/IEC/IEEE 29148:2018 que se refiere a Systems and Software Engineering, Life Cycle Processes, Requirements Engineering [9], la cual establece directrices para la definición de requerimientos funcionales y no funcionales en proyectos de ingeniería. Adicionalmente, se adoptaron estándares aplicables en la industria de automatización y control, asegurando que el sistema sea seguro, escalable, reproducible y mantenible.
 
 ##### Principios generales de diseño (IEEE 29148:2018)
@@ -149,9 +149,13 @@ El diseño del prototipo de Sorting Line with Color Detection 24V se fundamenta 
    - Actuador (ACT) empuja la ficha al contenedor (BOX).
    - Fototransistor de salida (FTS) confirma la clasificación.
    - El controlador espera 3 segundos antes de iniciar el próximo ciclo.
+
+  - Diagrama de arquitectura
+  ![.](imagenesWiki/diagramaarquitectura.png)
+
+     
 #### Esquemáticos de hardware diseñados
 
-#### Estándares de diseño aplicados
 
 ## 3. Configuración Experimental
 
