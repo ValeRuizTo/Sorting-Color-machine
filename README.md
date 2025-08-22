@@ -576,13 +576,15 @@ En conjunto, la propuesta busca:
 
 ## 5. Conclusiones y Trabajo Futuro
 
-#### Conclusiones principales
+#### Conclusion general
+En conclusión, el desarrollo del prototipo de línea de clasificación con detección de color permitió demostrar la viabilidad técnica de integrar sensores, actuadores y un controlador en un esquema de automatización inspirado en el IIoT. A pesar de las limitaciones enfrentadas, particularmente la falta de algunos sensores y la imposibilidad de energizar el sistema durante la etapa de pruebas, se validó de manera preliminar la lógica del proceso y su coherencia con los requerimientos planteados. Los retos superados fortalecieron la experiencia del equipo en diseño, integración y documentación de sistemas mecatrónicos. Como trabajo futuro, se plantea la implementación completa con los componentes faltantes, la optimización del software de control y la incorporación de mecanismos de conectividad y escalabilidad, con miras a acercar el prototipo a un entorno industrial real y plenamente operativo.
 
+#### Conclusiones especificas 
 - El proyecto permitió diseñar e implementar un prototipo funcional de línea de clasificación con detección de color, integrando sensores, actuadores y controlador en concordancia con los principios del IIoT.
 
 - A pesar de no haberse energizado el sistema durante las pruebas, se verificó que la secuencia mecánica y lógica de clasificación es coherente y viable, confirmando la correcta integración del diseño.
 
-- El uso de simulaciones manuales permitió identificar la validez del flujo operativo (detección → procesamiento → clasificación), demostrando que el prototipo responde al concepto planteado.
+- El uso de simulaciones manuales permitió identificar la validez del flujo operativo (detección -> procesamiento -> clasificación), demostrando que el prototipo responde al concepto planteado.
 
 - Se evidenció la necesidad de contar con todos los componentes adecuados (especialmente fototransistores y elementos de sensado) para garantizar la precisión y robustez del sistema en condiciones reales.
 
