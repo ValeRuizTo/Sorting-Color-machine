@@ -22,6 +22,18 @@ Con el fin de justificar el proyecto se revisaron trabajos recientes sobre autom
 | Sistema automático de clasificación por color basado en PLC, TIA Portal y Factory I/O | La clasificación manual por color es lenta, costosa y propensa a errores en procesos industriales de gran escala. | **Computación:** PLC Siemens CPU 1511-1 PN, software TIA Portal y Factory I/O (simulación y programación), SCADA y HMI para monitoreo.<br>**Percepción:** sensores de color (0–10 V).<br>**Conectividad:** PROFINET para comunicación entre dispositivos. | Dos bandas transportadoras (4 m y 2 m), tres sensores de color, tres empujadores neumáticos, cuatro chutes para objetos clasificados/no clasificados, botones de emergencia/reset/stop, sistema SCADA-HMI para supervisión y control. | Clasificación precisa y rápida (250 objetos en 20 min con alta fiabilidad), reducción de errores humanos, menor costo operativo, adaptable a distintas industrias (minería, reciclaje, granos), fácil expansión para detectar más colores u otras características. |
 
 
+### Objetivos del proyecto
+#### Objetivo general
+Diseñar, desarrollar, implementar y validar un prototipo automatizado de línea de clasificación de piezas por color, basado en principios de IIoT y utilizando el kit Fischertechnik Sorting Line with Color Detection 24V.
+#### Objetivo especifico
+- Identificar el proceso de control industrial y justificar su necesidad de automatización mediante revisión de antecedentes.
+- Levantar y documentar las restricciones de diseño (técnicas, económicas, regulatorias, temporales y de escalabilidad).
+- Diseñar la arquitectura de hardware y software que integre sensores, actuadores, controlador y conectividad.
+- Implementar el prototipo físico en base al diseño establecido.
+- Validar el funcionamiento mediante un protocolo de pruebas experimentales, evaluando desempeño y confiabilidad.
+- Documentar los resultados obtenidos y proponer mejoras o líneas de trabajo futuro.
+
+
 ### Estructura de la documentación
 - Resumen general: motivación, justificación, objetivos y estructura.
 - Solución propuesta: restricciones de diseño, arquitectura planteada, desarrollo modular y estándares aplicados.
@@ -30,7 +42,11 @@ Con el fin de justificar el proyecto se revisaron trabajos recientes sobre autom
 - Conclusiones y trabajo futuro: retos, aprendizajes y proyección del proyecto.Anexos: código fuente, esquemáticos y material complementario.
 
 
-#### Relevancia del proceso
+### Proceso seleccionado
+El proceso industrial seleccionado corresponde a una línea de clasificación de piezas por color (Sorting Line with Color Detection 24V), desarrollada con los kits de Fischertechnik \[8]. Este sistema reproduce de manera práctica y didáctica un proceso típico de automatización empleado en la industria manufacturera, donde resulta necesario clasificar objetos en función de sus propiedades físicas detectadas mediante sensores. La implementación de este tipo de líneas permite ilustrar cómo interactúan distintos elementos —sensores, actuadores, controladores y sistemas de transporte— para lograr la separación automática de piezas según criterios predefinidos, reflejando en pequeña escala el funcionamiento real de sistemas industriales más complejos.
+
+
+### Relevancia del proceso
 
 Este proceso de clasificación es fundamental porque:
 - Aumenta la eficiencia al reducir el tiempo y la intervención manual.
@@ -38,11 +54,6 @@ Este proceso de clasificación es fundamental porque:
 - Escala fácilmente a diferentes volúmenes de producción.
 - Reduce costos operativos asociados a errores humanos y reprocesamiento.
 - Integra principios de IIoT, ya que los datos capturados por sensores pueden enviarse a la nube o sistemas SCADA para monitoreo, análisis predictivo y optimización del proceso.
-
-
-### Proceso seleccionado
-El proceso industrial seleccionado corresponde a una línea de clasificación de piezas por color (Sorting Line with Color Detection 24V), desarrollada con los kits de Fischertechnik \[8]. Este sistema reproduce de manera práctica y didáctica un proceso típico de automatización empleado en la industria manufacturera, donde resulta necesario clasificar objetos en función de sus propiedades físicas detectadas mediante sensores. La implementación de este tipo de líneas permite ilustrar cómo interactúan distintos elementos —sensores, actuadores, controladores y sistemas de transporte— para lograr la separación automática de piezas según criterios predefinidos, reflejando en pequeña escala el funcionamiento real de sistemas industriales más complejos.
-
 
 ### Descripción del proceso 
 
@@ -85,6 +96,7 @@ Diagrama de bloques (hardware y software)
 ### Desarrollo teórico modular
 
 #### Criterios de diseño establecidos
+El diseño del prototipo de Sorting Line with Color Detection 24V se fundamenta en los lineamientos de la norma ISO/IEC/IEEE 29148:2018 que se refiere a Systems and Software Engineering, Life Cycle Processes, Requirements Engineering, la cual establece directrices para la definición de requerimientos funcionales y no funcionales en proyectos de ingeniería. Adicionalmente, se adoptaron estándares aplicables en la industria de automatización y control, asegurando que el sistema sea seguro, escalable, reproducible y mantenible.
 
 #### Diagramas UML (arquitectura general y módulos de software)
 
