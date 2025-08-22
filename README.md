@@ -488,24 +488,43 @@ En conclusión, el prototipo presenta un grado de madurez aceptable a nivel mec�
 
 ## 4. Autoevaluación del Protocolo de Pruebas
 
+
 ### 4.1 Metodología de validación
-El protocolo está diseñado para validar:
-- **Requerimientos funcionales**: detección de color, clasificación, registro de datos, interfaz.
-- **Requerimientos no funcionales**: velocidad, mantenibilidad, escalabilidad.
+El protocolo de validación fue diseñado con base en las buenas prácticas de verificación y validación de sistemas de control, siguiendo los lineamientos de la norma ISO/IEC/IEEE 29119 (Software Testing) y considerando tanto los requerimientos funcionales como los no funcionales del prototipo.
 
-La validación prevista incluye:
-- **Pruebas funcionales**: confirmar que cada módulo del sistema cumple su función.
-- **Pruebas de estrés**: evaluar la respuesta ante un alto volumen de piezas.
+- Requerimientos funcionales a validar:
 
----
+    - Detección de color de las piezas en la banda transportadora.
+    - Correcta activación de los mecanismos de clasificación según el color detectado.
+    - Visualización de la información en la pantalla del controlador TXT.
+    - Registro básico de eventos de clasificación para trazabilidad.
+
+- Requerimientos no funcionales a validar:
+
+    - Velocidad de procesamiento y respuesta del sistema ante la entrada de piezas.
+    - Facilidad de mantenimiento del montaje y reemplazo de componentes.
+    - Escalabilidad del diseño para incorporar sensores o actuadores adicionales en el futuro.
+    - La validación contempla los siguientes tipos de prueba:
+
+- Pruebas funcionales
+Se realizarán verificaciones unitarias y de integración para confirmar que cada módulo (sensores, actuadores, controlador) cumple con la función prevista y que la secuencia de clasificación responde a la lógica diseñada.
+
+- Pruebas de estrés
+El sistema será evaluado con un flujo continuo de piezas, incrementando progresivamente la frecuencia de entrada, con el objetivo de medir la capacidad de respuesta, la sincronización de los actuadores y la estabilidad de la operación bajo carga elevada.
+
+- Pruebas hipotéticas bajo energización
+Dado que el prototipo aún no fue energizado, se establece una metodología de validación futura que incluye la obtención de métricas cuantitativas (tiempo de respuesta, tasa de error, consumo energético) una vez que se disponga de todos los componentes y de las condiciones eléctricas adecuadas para su operación.  
+
+
 
 ### 4.2 Limitaciones del protocolo
-- Las pruebas se realizaron **sin energizar el sistema**, únicamente con manipulación manual.
-- No se evaluó precisión de detección, velocidad de procesamiento ni conectividad.
-- No se probó el comportamiento ante variaciones de iluminación o piezas con colores similares.
-- Falta ejecutar pruebas de fallos intencionales.
+- El protocolo de validación presenta algunas limitaciones importantes que deben considerarse al interpretar los resultados:
+  - Las pruebas se realizaron sin energización del prototipo, recurriendo únicamente a la manipulación manual para simular el flujo de piezas.
+  - No fue posible evaluar métricas cuantitativas como precisión de detección, velocidad de procesamiento o sincronización de actuadores.
+  - No se realizaron pruebas bajo condiciones ambientales variables (iluminación, contraste de colores similares, desgaste mecánico), lo que limita la validación de la robustez del sistema.
+  - Tampoco se contemplaron escenarios de fallos intencionales o condiciones anómalas (sensores desconectados, piezas defectuosas, sobrecarga de la banda), los cuales son esenciales para verificar la tolerancia a fallos y la seguridad operativa.
 
----
+En síntesis, los resultados obtenidos deben considerarse como una validación preliminar de la integración mecánica y lógica del diseño, quedando pendiente la validación integral en un entorno totalmente funcional y realista.
 
 ### 4.3 Mejores prácticas identificadas / Implementación a futuro
 - Calibrar sensores de color antes de cada jornada de trabajo.
