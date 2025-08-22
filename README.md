@@ -91,7 +91,12 @@ Las siguientes restricciones de diseño del prototipo se establecieron siguiendo
 
 ### Arquitectura propuesta
 
-  ![.](imagenesWiki/diagrama.png)
+  ![.](imagenesWiki/Diagrama.png)
+
+  - diagrama de bloques
+  ![.](imagenesWiki/diagramabloques.png)
+
+    
 
 ### Desarrollo teórico modular
 
