@@ -331,6 +331,46 @@ La validación prevista incluye:
 - Documentar cambios de hardware y software para facilitar la mantenibilidad.
 
 
+La implementación futura del sistema se plantea sobre una plataforma basada en **ESP32**, con el objetivo de simplificar la arquitectura, optimizar el control de los actuadores y garantizar mayor flexibilidad. La propuesta contempla los siguientes elementos clave:  
+
+- **Control central:**  
+  - El **ESP32** funcionará como cerebro del sistema, encargado de procesar señales, tomar decisiones de clasificación y coordinar la operación de los actuadores.  
+  - Su conectividad WiFi/Bluetooth abre la posibilidad de monitoreo remoto y ajustes de parámetros sin necesidad de cableado adicional.  
+
+- **Accionamiento de la cinta:**  
+  - El **motor DC** será controlado mediante un **driver L298N**, que permite variar la velocidad y el sentido de giro.  
+  - Se mantendrá el **mini-switch** como sensor de pulsos para conocer el avance de la cinta y sincronizar la expulsión de piezas.  
+
+- **Sensores de detección:**  
+  - **Barrera fotoeléctrica (IR):**  
+    - **Funcionalidad:** Detecta la presencia de una pieza en puntos clave del recorrido (entrada, antes del expulsor o en los contenedores).  
+    - **Opciones:** módulos **KY-010** o **KY-033**, que interrumpen un haz de luz infrarroja para indicar paso de un objeto.  
+
+  - **Fototransistor:**  
+    - **Funcionalidad:** Actúa como receptor de luz, permitiendo implementar barreras IR personalizadas o detectar variaciones de luminosidad al paso de una pieza.  
+    - **Opciones:** sensores discretos como el **TEPT4400** o módulos **TCRT5000**, muy usados en robótica para detección de proximidad o línea.  
+
+  - **Sensor de color:**  
+    - **Funcionalidad:** Identifica el color de cada pieza y determina a qué contenedor debe ser enviada.  
+    - **Opciones:**  
+      - **TCS34725**: sensor RGB con I²C y compensación de luz ambiente, buena precisión.  
+      - **APDS-9960**: además de color, ofrece detección de proximidad y gestos.  
+      - **ISL29125**: sensor RGB compacto y de bajo consumo.  
+
+- **Sistema de expulsión:**  
+  - Se reemplazarán los cilindros neumáticos por **servomotores**, que empujarán las piezas hacia el contenedor asignado según su color.  
+  - **Opciones de servo:**  
+    - **SG90**: adecuado para prototipos pequeños y bajo torque.  
+    - **MG996R**: mayor fuerza para piezas más pesadas.  
+  - Esta solución elimina la necesidad de compresores y electroválvulas, reduciendo complejidad y costos, además de facilitar el mantenimiento.  
+
+En conjunto, la propuesta busca:  
+- **Compactar el diseño**, eliminando la dependencia de sistemas neumáticos.  
+- **Aumentar la precisión**, gracias al control digital y la sincronización con sensores.
+- **Asegurar la funcionalidad**, con herramientas de mayor compatibilidad.
+- **Ampliar la escalabilidad**, aprovechando las capacidades de comunicación y procesamiento del ESP32.  
+
+
 
 ## 5. Conclusiones y Trabajo Futuro
 
