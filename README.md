@@ -138,7 +138,8 @@ El diseño del prototipo de Sorting Line with Color Detection 24V se fundamenta 
 - El sistema debe funcionar de forma continua durante al menos 2 horas sin intervención manual.
 
 - El código y los esquemáticos deben estar completamente documentados para garantizar mantenibilidad.
-- 
+
+
 #### Diagramas UML (arquitectura general y módulos de software)
 - Diagrama de actividades
   ![.](imagenesWiki/diagramaactividades.png)
@@ -177,7 +178,7 @@ El diseño del prototipo de Sorting Line with Color Detection 24V se fundamenta 
 Materiales: 
 
   - Controlador Fischertechnik
-  - 
+
 <img src="imagenesWiki/controlador.jpg" alt="Controlador" width="200" height="200" />
 
   - Fototransistores:
@@ -257,16 +258,16 @@ Las pruebas realizadas durante esta fase fueron de carácter manual y observacio
 
 ***Los resultados observados pueden resumirse de la siguiente manera:***
 
-- Respuesta del mecanismo de clasificación
+- **Respuesta del mecanismo de clasificación.**
 Se verificó que el sistema reacciona de forma adecuada cuando se introduce manualmente una ficha en la banda transportadora. El desplazamiento de las piezas hasta la zona de clasificación se desarrolla sin atascos mecánicos, lo cual confirma la correcta alineación de la banda y los componentes asociados.
 
-- Accionamiento de actuadores
+- **Accionamiento de actuadores.**
 La simulación del funcionamiento de las válvulas y actuadores demostró que los empujadores son capaces de dirigir las piezas hacia los compartimientos previstos. El recorrido mecánico de los cilindros resulta suficiente para garantizar el desvío de la pieza, sin generar interferencias con otros elementos de la línea.
 
-- Fluidez del sistema
+- **Fluidez del sistema.**
 La observación directa evidenció que la interacción entre la cinta transportadora y los mecanismos de clasificación es fluida, manteniendo una secuencia coherente que refleja el principio de funcionamiento planteado en el diseño teórico. La sincronización visual del avance de la ficha y el punto de clasificación se considera satisfactoria para esta etapa preliminar.
 
-- Limitaciones de la prueba
+- **Limitaciones de la prueba.**
   - Debido a la ausencia de energización, no fue posible comprobar:
     - La detección automática de colores mediante el sensor integrado.
     - Los tiempos de respuesta reales de los fototransistores y actuadores.
