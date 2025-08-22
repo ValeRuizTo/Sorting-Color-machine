@@ -128,7 +128,27 @@ El diseño del prototipo de Sorting Line with Color Detection 24V se fundamenta 
 - 
 #### Diagramas UML (arquitectura general y módulos de software)
 - Diagrama de actividades
-- ![.](imagenesWiki/diagramaactividades.png)
+  ![.](imagenesWiki/diagramaactividades.png)
+
+   - Percepción → sensores (fototransistores + sensor de color).
+
+   - Computación → lógica de control (procesa señales, decide el destino, maneja tiempos).
+
+   - Actuación → empujador/redirección de la ficha.
+
+   - Validación → confirmación de salida (fototransistor final).
+
+  - Diagrama de Secuencia
+  ![.](imagenesWiki/diagramasecuencia.png)
+
+   - El operador coloca la ficha en la banda.
+   - Fototransistor 1 (FT1) detecta entrada y avisa al controlador.
+   - Sensor de color (SC) envía la información de color.
+   - Controlador (CTRL) decide el destino de la ficha.
+   - Fototransistor 2 (FT2) indica que la ficha está alineada con el actuador.
+   - Actuador (ACT) empuja la ficha al contenedor (BOX).
+   - Fototransistor de salida (FTS) confirma la clasificación.
+   - El controlador espera 3 segundos antes de iniciar el próximo ciclo.
 #### Esquemáticos de hardware diseñados
 
 #### Estándares de diseño aplicados
