@@ -590,7 +590,29 @@ En conjunto, la propuesta busca:
 
 #### Retos durante el desarrollo
 
+- La principal dificultad fue la falta de disponibilidad de algunos sensores clave, en particular los fototransistores, lo que obligó a reemplazarlos en el diseño por sensores alternativos de color negro, limitando la fidelidad de las pruebas.
+
+- La imposibilidad de energizar el sistema restringió la validación a pruebas manuales y observacionales, sin poder medir tiempos de respuesta ni precisión en condiciones reales.
+
+- El montaje mecánico y la sincronización de piezas presentaron desafíos, especialmente en la calibración del punto exacto de empuje para asegurar que cada ficha cayera en el contenedor correcto.
+
+- Se enfrentaron limitaciones en la documentación técnica de los kits Fischertechnik, lo que requirió un proceso adicional de exploración y prueba-error para integrar los componentes disponibles.
+
 #### Líneas de trabajo futuro
+
+- Energización completa del sistema: realizar la validación con el prototipo conectado al controlador TX y todos los sensores activos, para medir desempeño en condiciones reales.
+
+- Integración de los fototransistores faltantes: sustituir los sensores provisionales por los adecuados, garantizando mayor precisión en la detección y sincronización del empuje.
+
+- Optimización del software de control: desarrollar rutinas más robustas que permitan gestionar diferentes velocidades de la cinta transportadora y detectar errores de clasificación.
+
+- Pruebas de robustez y tolerancia a fallos: incluir escenarios de error intencional (piezas mal colocadas, colores intermedios, ausencia de piezas) para evaluar la resiliencia del sistema.
+
+- Conectividad avanzada: explorar la transmisión de datos de clasificación a una interfaz externa (por ejemplo, vía MQTT o dashboards locales) para alinearse con los principios de IIoT.
+
+- Escalabilidad del prototipo: ampliar el número de colores detectados y aumentar el volumen de piezas para acercar el sistema a un escenario industrial real.
+
+
 
 ## 6. Referencias
 [1] Katana, "IoT in manufacturing — how to use it to your advantage", Katana MRP. Disponible en: https://katanamrp.com/iot-in-manufacturing/ (consultado el 21-agosto-2025).
