@@ -172,39 +172,48 @@ El diseño del prototipo de Sorting Line with Color Detection 24V se fundamenta 
   - Entradas digitales/analógicas para sensores.
   - Salidas digitales para motores y válvulas.
   - Pantalla integrada para monitoreo.
+    
   ![.](imagenesWiki/controlador.png)
 
 
-Sensores (entradas al TXT)
+Materiales: 
 
   - Fototransistores:
+    
   ![.](imagenesWiki/fototransistor.png)
 
-Fototransistor 1 → detección de entrada.
+  - Sensor optico de color:
+    
+  ![.](imagenesWiki/sensor.png)
 
-Sensor de color → clasificación.
+  - Compresor
 
-Fototransistor 2 → detección de posición.
+  ![.](imagenesWiki/compresor.png)
 
-Fototransistor de salida → validación.
+  - valvulas solenoides
+
+  ![.](imagenesWiki/valvulas.png)
+
+- Motor DC
+
+    ![.](imagenesWiki/motor.png)
+
+Sensores (entradas al TXT)
+- Fototransistor 1 → detección de entrada.
+- Sensor de color → clasificación.
+- Fototransistor 2 → detección de posición.
+- Fototransistor de salida → validación.
 
 Actuadores (salidas del TXT)
-
-Motor de la banda transportadora.
-
-3 válvulas solenoides (controladas desde el TXT).
-
-Cilindros neumáticos (accionados por las válvulas).
+- Motor de la banda transportadora.
+- 3 válvulas solenoides (controladas desde el TXT).
+- Cilindros neumáticos (accionados por las válvulas).
 
 Sistema neumático
 
-Compresor 24V.
+- Compresor
+- Línea de aire comprimido → válvulas solenoides → cilindros.
 
-Línea de aire comprimido → válvulas solenoides → cilindros.
-
-Fuente de alimentación 24V
-
-Alimenta controlador, compresor, válvulas, motor.
 ## 3. Configuración Experimental
 
 ### 3.1 Metodología experimental
