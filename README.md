@@ -225,42 +225,82 @@ Sistema neumático
 ## 3. Configuración Experimental
 
 ### 3.1 Metodología experimental
-Dado que el prototipo no pudo energizarse durante el desarrollo, las pruebas se realizaron **de forma manual** simulando el flujo de piezas, con observación directa del funcionamiento mecánico y secuencia de clasificación. La metodología está pensada para su ejecución futura en condiciones totalmente operativas.
 
-**Pasos realizados:**
-1. **Preparación del prototipo**  
-   - Ensamblaje de la cinta transportadora, sensor de color, actuadores y controlador TX.
-   - Verificación de integridad mecánica y conexiones.
+Dado que durante el desarrollo el prototipo **no pudo ser energizado**, las pruebas se llevaron a cabo de **manera manual**, simulando el flujo de piezas y evaluando la secuencia de clasificación mediante observación directa. Esta metodología se diseñó como un paso preliminar, con el objetivo de validar aspectos mecánicos y de ensamblaje, y servirá como base para la ejecución de pruebas completas en condiciones totalmente operativas.
 
-2. **Simulación manual de alimentación de piezas**  
-   - Colocación manual de piezas de distintos colores en la cinta para observar la respuesta mecánica de desvío de igual manera manualmente.
+#### Metodología aplicada:
 
-3. **Observación de clasificación**  
-   - Evaluación visual de si el mecanismo dirige las piezas a los compartimientos correctos.
+- Preparación del prototipo
+  - Ensamblaje de la cinta transportadora, el sensor de color, los actuadores neumáticos y el controlador TXT.
+
+  - Verificación de la integridad estructural, alineación de componentes y revisión de conexiones mecánicas.
+
+- Simulación manual del flujo de piezas
+
+  - Alimentación manual de fichas de distintos colores sobre la banda transportadora.
+
+  - Accionamiento manual de los mecanismos de desvío para simular la lógica de clasificación prevista.
+
+- Observación y registro de la clasificación
+
+  - Evaluación visual del recorrido de cada pieza, verificando que la mecánica permita dirigirlas hacia el compartimiento correspondiente.
+
+  - Identificación de posibles ajustes en la alineación de sensores o en la velocidad de la cinta para optimizar el desempeño en la fase de validación con energía.
 
 <img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/53e1880d-362d-4114-8768-c15825bcf371" />
 
 
----
+
 
 ### 3.2 Resultados obtenidos
-Las pruebas realizadas fueron de carácter **manual** y observacional, por lo que **no se obtuvieron datos numéricos precisos**.  
-Se verificó que:
-- El mecanismo de clasificación responde adecuadamente al estímulo de una pieza simulada.
-- Los actuadores dirigen las piezas hacia el contenedor correspondiente de forma mecánicamente correcta.
-- El sistema presenta fluidez en el movimiento y sincronización visual aceptable.
+Las pruebas realizadas durante esta fase fueron de carácter manual y observacional, debido a que el prototipo aún no pudo ser energizado con la fuente de 24 V. Como consecuencia, no se obtuvieron datos numéricos cuantitativos (tiempos de respuesta, frecuencia de clasificación, consumo energético, etc.); sin embargo, la metodología aplicada permitió validar los aspectos mecánicos y funcionales básicos del sistema.
 
----
+***Los resultados observados pueden resumirse de la siguiente manera:***
+
+- Respuesta del mecanismo de clasificación
+Se verificó que el sistema reacciona de forma adecuada cuando se introduce manualmente una ficha en la banda transportadora. El desplazamiento de las piezas hasta la zona de clasificación se desarrolla sin atascos mecánicos, lo cual confirma la correcta alineación de la banda y los componentes asociados.
+
+- Accionamiento de actuadores
+La simulación del funcionamiento de las válvulas y actuadores demostró que los empujadores son capaces de dirigir las piezas hacia los compartimientos previstos. El recorrido mecánico de los cilindros resulta suficiente para garantizar el desvío de la pieza, sin generar interferencias con otros elementos de la línea.
+
+- Fluidez del sistema
+La observación directa evidenció que la interacción entre la cinta transportadora y los mecanismos de clasificación es fluida, manteniendo una secuencia coherente que refleja el principio de funcionamiento planteado en el diseño teórico. La sincronización visual del avance de la ficha y el punto de clasificación se considera satisfactoria para esta etapa preliminar.
+
+- Limitaciones de la prueba
+  - Debido a la ausencia de energización, no fue posible comprobar:
+    - La detección automática de colores mediante el sensor integrado.
+    - Los tiempos de respuesta reales de los fototransistores y actuadores.
+    - La robustez del control bajo operación continua o con cargas prolongadas.
+
+En conclusión, los ensayos manuales permitieron confirmar la viabilidad mecánica del prototipo y proporcionan evidencia preliminar de que la lógica de clasificación diseñada podrá implementarse en condiciones operativas, una vez que se disponga de la alimentación y se realicen las pruebas automatizadas completas.
+
+
 
 ### 3.3 Análisis de resultados
-- El sistema cumple con la secuencia de clasificación prevista a nivel mecánico.
-- La ausencia de energización impide validar precisión, velocidad y conectividad en condiciones reales.
-- La observación manual permite confirmar que el diseño es funcional y que los componentes están correctamente integrados.
+El análisis de los ensayos preliminares permite establecer las siguientes consideraciones:
+
+- Cumplimiento de la lógica de clasificación
+A nivel mecánico, el prototipo demuestra que la secuencia de funcionamiento planteada en el diseño teórico es viable. La cinta transportadora asegura el desplazamiento de las piezas hacia la zona de clasificación y los mecanismos de desvío muestran la capacidad de redirigirlas correctamente hacia los compartimientos definidos. Esto confirma que la arquitectura de hardware es coherente con los objetivos del sistema.
+
+- Limitaciones derivadas de la ausencia de energización
+Si bien el prototipo pudo ser validado manualmente, la falta de alimentación eléctrica impidió evaluar parámetros clave para un sistema de control industrial en el contexto del IIoT, tales como:
+
+  - Precisión de detección de los sensores de color y fototransistores.
+  - Velocidad de respuesta de los actuadores bajo carga real.
+  - Consistencia del control en operaciones continuas o prolongadas.
+  - Conectividad y comunicación entre el controlador TXT y otros dispositivos, aspecto esencial en aplicaciones IIoT.
+
+- Escenario hipotético con energización
+Aun suponiendo que el prototipo hubiera contado con la alimentación eléctrica adecuada, el desempeño esperado se habría visto afectado por la disponibilidad limitada de componentes originales del kit. En particular, la ausencia de varios fototransistores obligó a sustituirlos en el diseño por otros finales de carrera, lo que habría reducido la precisión en la detección de paso de piezas y la capacidad de sincronización exacta entre la banda transportadora y los mecanismos de clasificación. Esto implica que, bajo condiciones energizadas, el sistema podría operar de manera funcional, pero con un margen mayor de error en comparación con la configuración ideal.
+
+- Integración de componentes
+La observación directa confirma que los subsistemas (banda transportadora, sensores, actuadores neumáticos y controlador) se encuentran correctamente integrados a nivel físico. El diseño mantiene la coherencia general y se considera preparado para ejecutar la lógica de clasificación automática, siempre que se disponga de los sensores adecuados y se realice la energización completa del prototipo.
+
+En conclusión, el prototipo presenta un grado de madurez aceptable a nivel mecánico y se encuentra en condiciones de avanzar hacia pruebas completas bajo energización. No obstante, se reconoce que el desempeño hipotético en este escenario estaría limitado por la sustitución de componentes, lo cual deberá ser abordado en futuras iteraciones del diseño para garantizar mayor robustez y confiabilidad.
 
 <img width="2431" height="661" alt="diagrama_clasificacion" src="https://github.com/user-attachments/assets/5955fb5c-9277-4817-ac33-3d7053dae767" />
 
 
----
 
 ## 4. Autoevaluación del Protocolo de Pruebas
 
