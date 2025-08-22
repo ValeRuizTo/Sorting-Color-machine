@@ -642,6 +642,3 @@ En conclusión, el desarrollo del prototipo de línea de clasificación con dete
 
 ![.](imagenesWiki/CodigoBloque.png)
 
-#### Esquemáticos de hardware
-
-Material complementario (diagramas, tablas, referencias)
