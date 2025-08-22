@@ -282,7 +282,6 @@ Dado que durante el desarrollo el prototipo **no pudo ser energizado**, las prue
 #### 8. Revisión mecánica final
 - Verificación del alineamiento de la cinta y los sensores.
 - Ajuste de tensión en la banda transportadora.
-- Revisión de fijaciones y apriete de tornillos para evitar vibraciones.
 
 #### 9. Preparación para cableado
 - Organización del cableado según la ubicación de motores, sensores y actuadores.
