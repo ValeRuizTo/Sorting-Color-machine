@@ -88,17 +88,14 @@ Dado que el prototipo no pudo energizarse durante el desarrollo, las pruebas se 
 
 **Pasos realizados:**
 1. **Preparación del prototipo**  
-   - Ensamblaje de la cinta transportadora, sensor de color, actuadores y controlador PLC/TXT.
+   - Ensamblaje de la cinta transportadora, sensor de color, actuadores y controlador TX.
    - Verificación de integridad mecánica y conexiones.
 
 2. **Simulación manual de alimentación de piezas**  
-   - Colocación manual de piezas de distintos colores en la cinta para observar la respuesta mecánica de desvío.
+   - Colocación manual de piezas de distintos colores en la cinta para observar la respuesta mecánica de desvío de igual manera manualmente.
 
 3. **Observación de clasificación**  
    - Evaluación visual de si el mecanismo dirige las piezas a los compartimientos correctos.
-
-4. **Registro de datos cualitativos**  
-   - Anotaciones sobre tiempos aproximados, fluidez del movimiento y precisión visual.
 
 <img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/53e1880d-362d-4114-8768-c15825bcf371" />
 
@@ -134,7 +131,6 @@ El protocolo está diseñado para validar:
 La validación prevista incluye:
 - **Pruebas funcionales**: confirmar que cada módulo del sistema cumple su función.
 - **Pruebas de estrés**: evaluar la respuesta ante un alto volumen de piezas.
-- **Pruebas de integración**: verificar la comunicación con el servidor IoT.
 
 ---
 
