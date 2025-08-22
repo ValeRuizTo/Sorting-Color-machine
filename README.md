@@ -168,17 +168,17 @@ El diseño del prototipo de Sorting Line with Color Detection 24V se fundamenta 
 
      
 #### Esquemáticos de hardware diseñados
-- Controlador Fischertechnik TXT  (unidad central).
-  - Entradas digitales/analógicas para sensores.
-  - Salidas digitales para motores y válvulas.
-  - Pantalla integrada para monitoreo.
 
-<img src="imagenesWiki/controlador.jpg" alt="Controlador" width="200" height="200" />
+
 
  
 
 
 Materiales: 
+
+  - Controlador Fischertechnik
+  - 
+<img src="imagenesWiki/controlador.jpg" alt="Controlador" width="200" height="200" />
 
   - Fototransistores:
     
@@ -199,6 +199,12 @@ Materiales:
 - Motor DC
 
     ![.](imagenesWiki/motores.png)
+
+
+Controlador Fischertechnik TXT  (unidad central).
+  - Entradas digitales/analógicas para sensores.
+  - Salidas digitales para motores y válvulas.
+  - Pantalla integrada para monitoreo.
 
 Sensores (entradas al TXT)
 - Fototransistor 1 → detección de entrada.
