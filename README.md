@@ -585,7 +585,9 @@ En conjunto, la propuesta busca:
 
 ## 7. Anexos
 
-#### Código fuente documentado
+#### Código fuente
+
+![.](imagenesWiki/CodigoBloque.png)
 
 #### Esquemáticos de hardware
 
