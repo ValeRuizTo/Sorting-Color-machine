@@ -91,11 +91,19 @@ Las siguientes restricciones de diseño del prototipo se establecieron siguiendo
 
 ### Arquitectura propuesta
 
-  ![.](imagenesWiki/Diagrama.png)
+![.](imagenesWiki/Diagrama.png)
 
-  - diagrama de bloques
+- Diagrama de bloques
   ![.](imagenesWiki/diagramabloques.png)
-
+  
+  - La ficha (entrada) inicia el ciclo.
+  - El controlador TXT (regulador) recibe señales y decide acciones.
+  - La interface traduce las órdenes a señales para actuadores.
+  - El motor y empujador ejecutan las acciones.
+  - El sistema es el proceso físico de transporte y clasificación.
+  - Los sensores monitorean el avance, color y salida.
+  - El acondicionamiento asegura que las señales lleguen limpias al controlador.
+  - La salida es la ficha depositada correctamente.
     
 
 ### Desarrollo teórico modular
