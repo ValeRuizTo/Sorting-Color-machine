@@ -231,22 +231,63 @@ Dado que durante el desarrollo el prototipo **no pudo ser energizado**, las prue
 
 #### Metodología aplicada:
 
-- Preparación del prototipo
+- **Preparación del prototipo**
   - Ensamblaje de la cinta transportadora, el sensor de color, los actuadores neumáticos y el controlador TXT.
-
   - Verificación de la integridad estructural, alineación de componentes y revisión de conexiones mecánicas.
 
-- Simulación manual del flujo de piezas
-
+- **Simulación manual del flujo de piezas**
   - Alimentación manual de fichas de distintos colores sobre la banda transportadora.
-
   - Accionamiento manual de los mecanismos de desvío para simular la lógica de clasificación prevista.
 
-- Observación y registro de la clasificación
-
+- **Observación y registro de la clasificación**
   - Evaluación visual del recorrido de cada pieza, verificando que la mecánica permita dirigirlas hacia el compartimiento correspondiente.
-
   - Identificación de posibles ajustes en la alineación de sensores o en la velocidad de la cinta para optimizar el desempeño en la fase de validación con energía.
+
+---
+
+### Construcción del Fischertechnik – Paso a Paso
+
+#### 1. Preparación inicial
+- Se revisaron todas las piezas del kit **Sorting Line with Color Detection 24V** disponibles.
+- Se organizaron perfiles, engranajes, soportes, motores, sensores.
+- Se constató que **no se contaba con el manual oficial** de ensamblaje.
+
+#### 2. Búsqueda de referencias
+- Se consultaron videos de demostración del modelo y fotografías de otros montajes en internet.
+- Se capturaron fotogramas de estos videos para analizarlos y replicar el diseño.
+- Se tomaron notas de la disposición de componentes y detalles estructurales.
+
+#### 3. Ensamblaje de la base y estructura
+- Se armó la **base principal** con perfiles y placas de montaje para asegurar estabilidad.
+- Se añadieron soportes laterales para la cinta transportadora.
+- Se fijaron guías y rieles para mantener el alineamiento de piezas durante su transporte.
+
+#### 4. Instalación de la cinta transportadora
+- Instalación de la banda transportadora en tensión adecuada.
+- Colocación del motor de la cinta y acoplamiento mediante engranajes o correas.
+
+#### 5. Montaje de sensores
+- Instalación del **sensor de color** en una posición centrada sobre la cinta en la caja roja.
+- Montaje de **sensores de presencia** (fototransistores) antes y después del sensor de color para detección de piezas.
+
+#### 6. Ensamblaje de actuadores de clasificación
+- Construcción de mecanismos de desvío para cada color.
+- Instalación de actuadores neumáticos o eléctricos para redirigir piezas a su contenedor.
+- Fijación de rampas o guías hacia los recipientes (rojo, blanco y azul oscuro).
+
+#### 7. Integración de compartimientos de salida
+- Montaje de rampas de salida.
+- Colocación de contenedores diferenciados por color.
+
+#### 8. Revisión mecánica final
+- Verificación del alineamiento de la cinta y los sensores.
+- Ajuste de tensión en la banda transportadora.
+- Revisión de fijaciones y apriete de tornillos para evitar vibraciones.
+
+#### 9. Preparación para cableado
+- Organización del cableado según la ubicación de motores, sensores y actuadores.
+- Etiquetado de cada cable para su posterior conexión al controlador.
+
 
 <img width="1300" height="1600" alt="image" src="https://github.com/user-attachments/assets/53e1880d-362d-4114-8768-c15825bcf371" />
 
