@@ -127,7 +127,8 @@ El diseño del prototipo de Sorting Line with Color Detection 24V se fundamenta 
 - El código y los esquemáticos deben estar completamente documentados para garantizar mantenibilidad.
 - 
 #### Diagramas UML (arquitectura general y módulos de software)
-
+- Diagrama de actividades
+- ![.](imagenesWiki/diagramaactividades.png)
 #### Esquemáticos de hardware diseñados
 
 #### Estándares de diseño aplicados
